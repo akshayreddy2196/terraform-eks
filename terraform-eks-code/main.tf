@@ -11,7 +11,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.0"
 
-  name = "sreekanth-vpc"
+  name = "akshay-vpc"
   cidr = "10.10.0.0/16"
 
   azs             = ["us-east-1a", "us-east-1b", "us-east-1c"]
@@ -74,7 +74,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "20.8.4"
 
-  cluster_name    = "sreekanth-eks-cluster"
+  cluster_name    = "akshay-eks-cluster"
   cluster_version = "1.29"
 
   subnet_ids = module.vpc.private_subnets
@@ -116,3 +116,4 @@ resource "aws_ecr_repository" "app_repo" {
     Environment = "dev"
   }
 }
+
