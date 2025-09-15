@@ -29,7 +29,7 @@ jobs:
     - name: Terraform Init
       run: |
         cd terraform-eks-code
-        terraform init
+        terraform init -upgrade
 
     # Step 5: Run Terraform Plan
     - name: Terraform Plan
