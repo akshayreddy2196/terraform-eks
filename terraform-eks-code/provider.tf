@@ -6,9 +6,10 @@ provider "aws" {
 # Backend Configuration (for S3)
 terraform {
   backend "s3" {
-    bucket = "sreekanth-bucket-hcl-test"  
+    bucket = "devops-tfstate-hu2"  
     key    = "terraform.tfstate"          
     region = "us-east-1"              
   }
 }
+
 
