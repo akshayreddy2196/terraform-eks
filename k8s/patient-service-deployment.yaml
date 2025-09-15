@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: patient-service
-          image: 539935451710.dkr.ecr.us-east-1.amazonaws.com/sreekanth-ecr-repo:patient-service-latest
+          image: 445830509416.dkr.ecr.ap-south-1.amazonaws.com/patient-service
           ports:
             - containerPort: 3000
 ---
@@ -30,3 +30,4 @@ spec:
       port: 80
       targetPort: 3000
   type: LoadBalancer
+
