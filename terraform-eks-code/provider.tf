@@ -1,7 +1,13 @@
 # Define the AWS provider
-provider "aws" {
-  region = "us-east-1"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.35.0"
+    }
+  }
 }
+
 
 # Backend Configuration (for S3)
 terraform {
@@ -11,5 +17,6 @@ terraform {
     region = "us-east-1"              
   }
 }
+
 
 
