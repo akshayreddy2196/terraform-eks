@@ -72,7 +72,7 @@ resource "aws_security_group" "eks_node_sg" {
 # EKS Cluster
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "20.8.4"
+  version = "20.6.0"
 
   cluster_name    = "akshay-eks-cluster"
   cluster_version = "1.29"
@@ -116,5 +116,6 @@ resource "aws_ecr_repository" "app_repo" {
     Environment = "dev"
   }
 }
+
 
 
