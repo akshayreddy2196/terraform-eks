@@ -43,12 +43,12 @@ jobs:
     - name: Push Docker images to ECR
       run: |
         # Tag the images
-        docker tag appointment-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/sreekanth-ecr-repo:appointment-service-latest
-        docker tag patient-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/sreekanth-ecr-repo:patient-service-latest
+        docker tag appointment-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/appointment-service
+        docker tag patient-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/patient-service
 
         # Push the images to ECR
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/sreekanth-ecr-repo:appointment-service-latest
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/sreekanth-ecr-repo:patient-service-latest
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/appointment-service
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/patient-service
 
     # Step 7: Set up kubectl manually (to ensure it works regardless of action issues)
     - name: Install kubectl
