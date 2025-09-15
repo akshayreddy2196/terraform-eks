@@ -41,8 +41,9 @@ jobs:
     - name: Push Docker images to ECR
       run: |
         # Tag the images
-        docker tag appointment-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/appointment-service
-        docker tag patient-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/patient-service
+        docker tag appointment-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/akshay-ecr-repo:appointment-service-latest
+        docker tag patient-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/akshay-ecr-repo:patient-service-latest
+
 
         # Push the images to ECR
         docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/appointment-service
