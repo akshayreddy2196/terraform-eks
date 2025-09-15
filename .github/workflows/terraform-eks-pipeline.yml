@@ -1,9 +1,7 @@
 name: EKS Setup Pipeline
 
 on:
-  push:
-    branches:
-      - main  
+  workflow_dispatch
 jobs:
   terraform:
     runs-on: ubuntu-latest
