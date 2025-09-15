@@ -48,5 +48,5 @@ jobs:
     # Step 7: Set up kubectl (to interact with the EKS cluster after setup)
     - name: Set up kubectl
       run: |
-        aws eks --region us-east-1 update-kubeconfig --name sreekanth-eks-cluster
+        aws eks --region us-east-1 update-kubeconfig --name akshay-eks-cluster
         kubectl get nodes
