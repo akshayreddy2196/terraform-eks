@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: appointment-service
-          image: 539935451710.dkr.ecr.us-east-1.amazonaws.com/sreekanth-ecr-repo:appointment-service-latest
+          image: 445830509416.dkr.ecr.ap-south-1.amazonaws.com/appointment-service
           ports:
             - containerPort: 3001
 ---
@@ -30,3 +30,4 @@ spec:
       port: 80
       targetPort: 3001
   type: LoadBalancer
+
