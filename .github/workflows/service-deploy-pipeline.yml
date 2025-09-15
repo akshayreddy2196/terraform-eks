@@ -46,8 +46,8 @@ jobs:
 
 
         # Push the images to ECR
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/appointment-service
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/patient-service
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/akshay-ecr-repo:appointment-service-latest
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/akshay-ecr-repo:patient-service-latest
 
     # Step 7: Set up kubectl manually (to ensure it works regardless of action issues)
     - name: Install kubectl
@@ -57,7 +57,7 @@ jobs:
 
     - name: Configure kubeconfig
       run: |
-        aws eks --region us-east-1 update-kubeconfig --name sreekanth-eks-cluster
+        aws eks --region us-east-1 update-kubeconfig --name akshay-eks-cluster
 
 
     # Step 8: Deploy to EKS using kubectl
