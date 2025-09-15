@@ -1,9 +1,7 @@
 name: Build and Deploy to EKS
 
 on:
-  push:
-    branches:
-      - main  # Trigger deployment on push to the main branch
+ workflow_dispatch
 
 jobs:
   build-and-deploy:
