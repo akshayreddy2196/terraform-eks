@@ -109,11 +109,12 @@ resource "aws_eks_addon" "kube_proxy" {
 
 # ECR Repository
 resource "aws_ecr_repository" "app_repo" {
-  name                 = "sreekanth-ecr-repo"
+  name                 = "akshay-ecr-repo"
   image_tag_mutability = "MUTABLE"
 
   tags = {
     Environment = "dev"
   }
 }
+
 
