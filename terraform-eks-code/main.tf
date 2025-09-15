@@ -83,7 +83,7 @@ module "eks" {
 
   
   cluster_endpoint_public_access  = true   # Allow GitHub Actions to access API
-  cluster_endpoint_private_access = fals
+  cluster_endpoint_private_access = false
 
 
   eks_managed_node_groups = {
@@ -126,6 +126,7 @@ resource "aws_ecr_repository" "app_repo" {
     Environment = "dev"
   }
 }
+
 
 
 
