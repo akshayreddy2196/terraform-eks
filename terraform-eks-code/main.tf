@@ -88,6 +88,9 @@ module "eks" {
       min_size       = 1
       instance_types = ["t3.medium"]
       ami_type       = "AL2023_x86_64_STANDARD"    
+      disk_size      = 20
+      enable_node_auto_repair = true
+
       tags = {
         Name = "default-node-group"
       }
@@ -118,6 +121,7 @@ resource "aws_ecr_repository" "app_repo" {
     Environment = "dev"
   }
 }
+
 
 
 
